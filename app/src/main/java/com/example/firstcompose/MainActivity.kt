@@ -44,38 +44,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
-@Preview(showBackground = true, name = "Hello Msg", showSystemUi = true)
-@Composable
-private fun previewFunction() {
-    Column {
-        ListItem(R.drawable.ic_launcher_background,"Sanket Thakare","Android Developer",Modifier)
-        ListItem(R.drawable.ic_launcher_background,"Sanket Thakare","Android Developer",Modifier)
-        ListItem(R.drawable.ic_launcher_background,"Sanket Thakare","Android Developer",Modifier)
-        ListItem(R.drawable.ic_launcher_background,"Sanket Thakare","Android Developer",Modifier)
-    }
-}
-
-@Composable
-fun ListItem(imageId: Int, name: String, occupation: String,modifier: Modifier) {
-    Row (modifier.padding(8.dp)){
-        Image(
-            painter = painterResource(
-                id = imageId
-            ),
-            contentDescription = "temp",
-            Modifier.size(40.dp)
-        )
-        Column() {
-            Text(
-                text = name,
-                fontWeight = FontWeight.Bold
-            )
-            Text(
-                text = occupation,
-                fontWeight = FontWeight.Thin
-            )
-        }
-    }
-}
-
